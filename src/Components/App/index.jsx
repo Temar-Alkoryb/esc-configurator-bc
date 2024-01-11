@@ -54,6 +54,10 @@ function App({
     dispatch(showAppSettings());
   }, [dispatch]);
 
+  const handleNewButtonClick = useCallback(() => {
+    console.log('CLICK');
+  }, []);
+
   return (
     <div>
       <div className="main">
@@ -78,6 +82,16 @@ function App({
                   type="button"
                 >
                   {t('settings')}
+                </button>
+              </div>
+
+              <div className="button button--dark">
+                <button
+                  id="newButton"
+                  onClick={handleNewButtonClick}
+                  type="button"
+                >
+                  Нова кнопка
                 </button>
               </div>
 
